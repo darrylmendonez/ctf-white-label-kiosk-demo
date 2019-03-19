@@ -1,0 +1,42 @@
+.btn-pipeline {
+  img {
+    max-width: 433px;
+    width: 100%;
+  }
+
+  &:before {
+    color: #15306c;
+    content: '\f00e';
+    font-family: 'Font Awesome 5 Pro';
+    font-size: 7rem;
+    font-weight: 400;
+    left: calc(50% - 0.5em);
+    position: absolute;
+    top: calc(100% - 3em);
+  }
+}
+
+@-webkit-keyframes boxshadowAnimation {
+  0% {
+    border: solid 1px transparent;
+    border-radius: 0;
+    box-shadow: 0 0 0 rgba(26, 57, 101, 0);
+  }
+
+  50% {
+    border: solid 1px #15306c;
+    border-radius: 1.2rem;
+    box-shadow: 0 0 200px rgba(77, 145, 223, 0.9);
+  }
+
+  100% {
+    border: none;
+    border: solid 1px transparent;
+    border-radius: 0;
+    box-shadow: 0 0 0 rgba(26, 57, 101, 0);
+  }
+}
+
+.modal-dialog-pipeline {
+  margin: -17.5rem auto
+}

@@ -1,0 +1,34 @@
+<button class="btn btn-link btn-pipeline" (click)="openModal(template)">
+  <img
+    src="assets/images/home/pipeline-thumbnail.png"
+    alt="Immunology Pipeline At A Glance"
+  />
+</button>
+
+<ng-template #template>
+  <div class="modal-dialog-pipeline">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title">Immunology Pipeline <span>At A Glance</span></h2>
+  
+        <button
+          class="btn btn-link btn-close modal-btn-close"
+          (click)="closeFirstModal()"
+        >
+          <span class="fa-stack fa-2x">
+            <i class="fas fa-circle fa-stack-2x text-secondary"></i>
+            <i class="fal fa-times fa-stack-1x fa-inverse"></i>
+          </span>
+          Close
+        </button>
+      </div>
+      <div class="modal-body">
+        <img
+          class="img-fluid"
+          src="../../../../assets/images/home/pipeline.png"
+          alt="Immunology Pipeline At A Glance"
+        />
+      </div>
+    </div>
+  </div>
+</ng-template>

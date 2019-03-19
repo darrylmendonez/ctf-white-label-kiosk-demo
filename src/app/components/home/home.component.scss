@@ -1,0 +1,117 @@
+.card {
+  background-color: transparent;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  border: 0;
+
+  &-title {
+    color: #15306c;
+    margin-top: -3.9rem;
+    overflow: hidden;
+    padding-bottom: 0.8rem;
+    text-align: center;
+
+    span {
+      display: block;
+      font-size: 1.4rem;
+      left: 35.6rem;
+      position: absolute;
+      top: 0.9rem;
+    }
+  }
+
+  &-body {
+    border-radius: 1.2rem;
+    border-top: 0;
+    padding: 1.25rem 0;
+  }
+
+  &:nth-child(1) {
+    background-image: url('../../../assets/images/home/border_01.svg');
+    width: 577.5px;
+  }
+
+  &:nth-child(2) {
+    background-image: url('../../../assets/images/home/border_02.svg');
+    width: 395.87px;
+  }
+
+  &:nth-child(3) {
+    background-image: url('../../../assets/images/home/border_03.svg');
+    width: 327.33px;
+  }
+
+  &:nth-child(4) {
+    background-image: url('../../../assets/images/home/border_04.svg');
+    width: 395.87px;
+  }
+}
+
+.trial-wrap {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin: 25.1rem auto 0;
+
+  .card {
+    height: 148.5px;
+
+    &-btn-group {
+      display: flex;
+      justify-content: center;
+    }
+
+    &-btn {
+      align-items: center;
+      font-size: 2.4rem;
+      height: 8rem;
+      line-height: 1.1;
+      margin: 0 0.4rem;
+      max-width: 219px;
+      padding: 1.3rem 0;
+      width: 100%;
+
+      span {
+        display: block;
+        font-size: 1.2rem;
+        margin: 0 auto;
+      }
+
+      &:not(:only-child) {
+        width: 175px;
+      }
+    }
+  }
+
+  .card button {
+    border: 0;
+  }
+
+  .card-btn {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+.pipeline-wrap {
+  margin: 8.3rem auto 0;
+  text-align: center;
+  width: 52.6rem; //526.87px
+
+  .card {
+    background-image: url('../../../assets/images/home/border-pipeline.svg');
+    height: 344.02px;
+
+    &-body {
+      padding-bottom: 1rem;
+    }
+
+    &-title {
+      letter-spacing: -0.31px;
+      margin-bottom: 1rem;
+      margin-top: -3.2rem;
+      padding-bottom: 0.5rem;
+    }
+  }
+}

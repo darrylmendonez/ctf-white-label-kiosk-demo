@@ -1,0 +1,18 @@
+:host {
+  bottom: 2.9rem;
+  position: absolute;
+  right: 3.8rem;
+
+  button {
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  span {
+    display: block;
+    font-size: 3rem;
+    margin-bottom: 0.4rem;
+  }
+}

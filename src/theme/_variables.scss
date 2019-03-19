@@ -1,0 +1,42 @@
+$blue: #00579e;
+$white: #fff;
+$secondary: #4a90e2;
+$primary: #036;
+
+$dark-blue: #15306c;
+$gray: #828282;
+$dark-gray: #474747;
+$body-color: $white;
+$font-family-sans-serif: 'MyriadPro', 'Helvetica Neue', Arial, sans-serif;
+$headings-font-family: 'Geogrotesque', 'MyriadPro', 'Helvetica Neue', Arial,
+  sans-serif;
+$headings-color: $dark-blue;
+$h1-font-size: 6rem;
+$h2-font-size: 4rem;
+$h3-font-size: 3rem;
+$h4-font-size: 2rem;
+$h5-font-size: 1.75rem;
+
+$footer-font-size: 1.5rem;
+
+$border-radius: 1.2rem;
+$nav-link-padding-x: 0;
+
+$link-hover-decoration: none;
+$btn-border-width: 0;
+$btn-active-box-shadow: none;
+$modal-dialog-margin-y-sm-up: 17.5rem;
+$modal-content-color: $white;
+$modal-content-bg: transparent;
+$modal-backdrop-bg: #1a3965;
+$modal-backdrop-opacity: 0.9;
+$modal-content-border-width: 0;
+// $modal-lg: 1008px;
+$modal-lg: 1308px;
+
+$close-color: $white;
+$close-text-shadow: 0;
+
+$container-max-widths: (
+  xl: 1815px
+);

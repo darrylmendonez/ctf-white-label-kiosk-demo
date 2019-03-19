@@ -1,0 +1,367 @@
+<nav class="container px-0">
+  <div class="tarea" *ngFor="let area of tAreas">
+    <h3 class="tarea-title">
+      {{ area.name }}
+    </h3>
+    <div class="tarea-group">
+      <button
+        [class.active]="disease.parameterName === currentDisease.parameterName"
+        [routerLink]="['/trial/'] + disease.parameterName"
+        class="btn btn-primary btn-trial"
+        *ngFor="let disease of area.diseases"
+        (click)="loadData(disease.parameterName)"
+      >
+        {{ disease.primaryName }}<span>{{ disease.secondaryName }}</span>
+      </button>
+    </div>
+  </div>
+</nav>
+<div class="trial-contain">
+  <div class="card flex-row" *ngIf="currentDisease">
+    <div class="card-header rounded-left flex-auto bg-secondary">
+      <div [ngClass]="{ 'trial-transition': isTransition }">
+        Compound ({{ currentCompoundInfo.compoundCount }})
+        <h1 [innerHTML]="currentCompoundInfo.primaryName"></h1>
+        <h2>{{ currentCompoundInfo.secondaryName }}</h2>
+      </div>
+    </div>
+    <div class="card-body d-flex flex-column align-items-start text-primary">
+      <div [ngClass]="{ 'trial-transition': isTransition }">
+        <div class="card-body__group">
+          <h5 class="card-title">
+            Trials ({{ currentDisease.trials.length }})
+          </h5>
+          <div
+            class="sub-trials-links"
+            *ngIf="currentDisease.trials.length > 1"
+          >
+            <button
+              class="btn btn-link"
+              [class.active]="subParameter === trial.parameterName"
+              (click)="loadSubTrialsFromTrialLinks(trial.parameterName)"
+              *ngFor="let trial of currentDisease.trials; let i = index"
+            >
+              {{ trial.name }}
+            </button>
+          </div>
+        </div>
+        <div
+          class="card-content"
+          *ngIf="currentParams === 'uc' || currentParams === 'ln'"
+        >
+          <div *ngIf="currentParams === 'uc'">
+            <!-- sub trial buttons -->
+            <div
+              [@flipCardFront]="!!cardFlipped"
+              class="card-body__indent sub-trials"
+            >
+              <button
+                *ngFor="let trial of currentDisease.trials"
+                class="btn btn-secondary btn-disease"
+                (click)="loadSubTrials(trial.parameterName)"
+              >
+                Phase {{ trial.phase }} <span>{{ trial.name }}</span>
+              </button>
+              <p class="footnotes">
+                *This compound is an investigational agent in the therapeutic
+                focus area(s) and is not approved. Its safety and efficacy have
+                not been established.
+              </p>
+            </div>
+            <!-- sub trial data cards -->
+            <div [@flipCardBack]="!!cardFlipped">
+              <div class="card-body__indent trials-uc-ln">
+                <div *ngIf="subParameter === 'uc1'">
+                  <button
+                    class="btn btn-link btn-close btn-subtrial-close"
+                    (click)="loadSubTrials(currentDisease.parameterName)"
+                  >
+                    <span class="fa-stack fa-2x">
+                      <i class="fas fa-circle fa-stack-2x text-secondary"></i>
+                      <i class="fal fa-times fa-stack-1x fa-inverse"></i>
+                    </span>
+                    Close
+                  </button>
+                  Phase II
+                  <h3>1368-0004</h3>
+                  <ul>
+                    <li>
+                      N = 10
+                    </li>
+                    <li>
+                      Open-label, exploratory study
+                    </li>
+                    <li>
+                      Primary endpoint: Change in gene expression through Week
+                      12
+                    </li>
+                    <li>
+                      ClinicalTrials.gov identifier: NCT03100864; EudraCT No.:
+                      2017-000100-20
+                    </li>
+                  </ul>
+                  <p class="footnotes">
+                    *This compound is an investigational agent in the
+                    therapeutic focus area(s) and is not approved. Its safety
+                    and efficacy have not been established.<br />
+                    ClinicalTrials.gov. Available at:
+                    https://www.clinicaltrials.gov/ct2/show/NCT03100864
+                    (Accessed 17 January 2019)
+                  </p>
+                </div>
+                <div *ngIf="subParameter === 'uc2'">
+                  <button
+                    class="btn btn-link btn-close btn-subtrial-close"
+                    (click)="loadSubTrials(currentDisease.parameterName)"
+                  >
+                    <span class="fa-stack fa-2x">
+                      <i class="fas fa-circle fa-stack-2x text-secondary"></i>
+                      <i class="fal fa-times fa-stack-1x fa-inverse"></i>
+                    </span>
+                    Close
+                  </button>
+                  Phase II/III
+                  <h3>1368-0005</h3>
+                  <ul>
+                    <li>
+                      N = 550
+                    </li>
+                    <li>
+                      Multicenter, randomized, double-blind, placebo-controlled
+                      study
+                    </li>
+                    <ul>
+                      <li>
+                        Phase II: Proof-of-concept study of BI 655130* in
+                        patients with moderate to severely active ulcerative
+                        colitis who have failed previous treatments to identify
+                        efficacious and safe dose regimens
+                      </li>
+                      <li>
+                        Phase III: Confirm efficacy and safety of BI 655130* in
+                        patients with moderate to severely active ulcerative
+                        colitis who have failed previous biologic regimens
+                      </li>
+                    </ul>
+                    <li>
+                      Primary endpoint: Proportion of patients with clinical
+                      remission at Week 12
+                    </li>
+                    <li>
+                      ClinicalTrials.gov identifier: NCT03482635; EudraCT No.:
+                      2017-004230-28
+                    </li>
+                  </ul>
+                  <p class="footnotes">
+                    *This compound is an investigational agent in the
+                    therapeutic focus area(s) and is not approved. Its safety
+                    and efficacy have not been established.<br />
+                    ClinicalTrials.gov. Available at:
+                    https://www.clinicaltrials.gov/ct2/show/NCT03482635
+                    (Accessed 17 January 2019)
+                  </p>
+                </div>
+                <div *ngIf="subParameter === 'uc3'">
+                  <button
+                    class="btn btn-link btn-close btn-subtrial-close"
+                    (click)="loadSubTrials(currentDisease.parameterName)"
+                  >
+                    <span class="fa-stack fa-2x">
+                      <i class="fas fa-circle fa-stack-2x text-secondary"></i>
+                      <i class="fal fa-times fa-stack-1x fa-inverse"></i>
+                    </span>
+                    Close
+                  </button>
+                  Phase II
+                  <h3>1368-0010</h3>
+                  <ul>
+                    <li>
+                      N = 30
+                    </li>
+                    <li>
+                      Multicenter, randomized, double-blind, placebo-controlled,
+                      proof-of-concept study
+                    </li>
+                    <li>
+                      Primary endpoint: Proportion of patients with mucosal
+                      healing (MCS mESS &le; 1) at Week 8
+                    </li>
+                    <li>
+                      ClinicalTrials.gov identifier: NCT03123120; EudraCT No.:
+                      2016-004572-21
+                    </li>
+                  </ul>
+                  <p class="footnotes">
+                    *This compound is an investigational agent in the
+                    therapeutic focus area(s) and is not approved. Its safety
+                    and efficacy have not been established.<br />
+                    MCS, Mayo Clinic Score; mESS, modified Endoscopic
+                    Subscore.<br />
+                    ClinicalTrials.gov. Available at:
+                    https://www.clinicaltrials.gov/ct2/show/NCT03123120
+                    (Accessed 17 January 2019)
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div *ngIf="currentParams === 'ln'">
+            <!-- sub trial buttons -->
+            <div
+              [@flipCardFront]="!!cardFlipped"
+              class="card-body__indent sub-trials"
+            >
+              <button
+                *ngFor="let trial of currentDisease.trials"
+                class="btn btn-secondary btn-disease"
+                (click)="loadSubTrials(trial.parameterName)"
+              >
+                Phase {{ trial.phase }} <span>{{ trial.name }}</span>
+              </button>
+              <p class="footnotes">
+                <sup>*</sup>This compound is an investigational agent in the
+                therapeutic focus area(s) and is not approved. Its safety and
+                efficacy have not been established. <br /><sup>✝</sup>BI 655064
+                is part of a collaboration with Pharmacy Company; Company Brand is
+                currently responsible for the clinical development and Pharmacy Company
+                may elect to advance the program after completion of certain
+                undisclosed clinical achievements.
+              </p>
+            </div>
+            <!-- sub trial data cards -->
+            <div [@flipCardBack]="!!cardFlipped">
+              <div class="card-body__indent trials-uc-ln">
+                <div *ngIf="subParameter === 'ln1'">
+                  <button
+                    class="btn btn-link btn-close btn-subtrial-close"
+                    (click)="loadSubTrials(currentDisease.parameterName)"
+                  >
+                    <span class="fa-stack fa-2x">
+                      <i class="fas fa-circle fa-stack-2x text-secondary"></i>
+                      <i class="fal fa-times fa-stack-1x fa-inverse"></i>
+                    </span>
+                    Close
+                  </button>
+                  Phase II
+                  <h3>1293-0010</h3>
+                  <ul>
+                    <li>
+                      N = 120
+                    </li>
+                    <li>
+                      Multicenter, randomized, double-blind, placebo-controlled
+                      study
+                    </li>
+                    <li>
+                      Patients with active lupus nephritis
+                    </li>
+                    <li>
+                      Primary endpoint: Proportion of patients with CRR at Week
+                      52
+                    </li>
+                    <li>
+                      ClinicalTrials.gov identifier: NCT02770170; EudraCT No.:
+                      2015-001750-15
+                    </li>
+                  </ul>
+                  <p class="footnotes">
+                    <sup>*</sup>This compound is an investigational agent in the
+                    therapeutic focus area(s) and is not approved. Its safety
+                    and efficacy have not been established.<br />
+                    ✝BI 655064 is part of a collaboration with Pharmacy Company;
+                    Company Brand is currently responsible for the
+                    clinical development and Pharmacy Company may elect to advance the
+                    program after completion of certain undisclosed clinical
+                    achievements.<br />
+                    CRR, complete renal response.<br />ClinicalTrials.gov.
+                    Available at:
+                    https://www.clinicaltrials.gov/ct2/show/NCT02770170
+                    (Accessed 17 January 2019)
+                  </p>
+                </div>
+                <div *ngIf="subParameter === 'ln2'">
+                  <button
+                    class="btn btn-link btn-close btn-subtrial-close"
+                    (click)="loadSubTrials(currentDisease.parameterName)"
+                  >
+                    <span class="fa-stack fa-2x">
+                      <i class="fas fa-circle fa-stack-2x text-secondary"></i>
+                      <i class="fal fa-times fa-stack-1x fa-inverse"></i>
+                    </span>
+                    Close
+                  </button>
+                  Phase II
+                  <h3>1293-0013</h3>
+                  <ul>
+                    <li>
+                      N = 150
+                    </li>
+                    <li>
+                      Multicenter, randomized, double-blind, placebo-controlled
+                      study
+                    </li>
+                    <li>
+                      Patients with lupus nephritis who have achieved a CRR or a
+                      PRR or proteinuria &le; 1 g/day (or urine
+                      protein/creatinine ratio &le; 1) in NCT02770170
+                    </li>
+                    <li>
+                      Primary endpoint: Proportion of patients with CRR and
+                      without any renal flares at Week 52
+                    </li>
+                    <li>
+                      ClinicalTrials.gov identifier: NCT03385564; EudraCT No.:
+                      2017-003101-17
+                    </li>
+                  </ul>
+                  <p class="footnotes">
+                    <sup>*</sup>This compound is an investigational agent in the
+                    therapeutic focus area(s) and is not approved. Its safety
+                    and efficacy have not been established.<br />
+                    ✝BI 655064 is part of a collaboration with Pharmacy Company;
+                    Company Brand is currently responsible for the
+                    clinical development and Pharmacy Company may elect to advance the
+                    program after completion of certain undisclosed clinical
+                    achievements.<br />
+                    CRR, complete renal response; PRR, partial renal
+                    response.<br />
+                    ClinicalTrials.gov. Available at:
+                    https://www.clinicaltrials.gov/ct2/show/NCT03385564
+                    (Accessed 17 January 2019)
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- single trial data cards -->
+        <div
+          class="card-body__indent trials-uc-ln"
+          *ngIf="currentParams !== 'uc' && currentParams !== 'ln'"
+        >
+          Phase {{ currentTrial.phase }}
+          <h3>{{ currentTrial.name }}</h3>
+          <ul>
+            <span *ngFor="let detail of currentTrial.details">
+              <li *ngIf="stringCheck(detail)" [innerHTML]="detail"></li>
+              <ul *ngIf="!stringCheck(detail)">
+                <li
+                  *ngFor="let subDetail of detail"
+                  [innerHTML]="subDetail"
+                ></li>
+              </ul>
+            </span>
+          </ul>
+          <p class="footnotes">
+            <span *ngFor="let footnote of currentTrial.footnotes">
+              <span [innerHTML]="footnote"></span>
+              <br />
+            </span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<app-home-menu-btn></app-home-menu-btn>
