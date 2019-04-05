@@ -5,7 +5,7 @@ import { TAreaData } from '../../data/tArea.data';
 import { fadeIn } from '../../router.animation';
 import { ActivatedRoute } from '@angular/router';
 
-declare var addMetric: any;
+// declare var addMetric: any;
 
 @Component({
   selector: 'app-home',
@@ -23,7 +23,7 @@ export class HomeComponent implements OnInit {
 
   @HostBinding('@fadeIn')
   ngOnInit() {
-    addMetric(2, 'Home page viewed.');
+    // addMetric(2, 'Home page viewed.');
     console.log('Home page viewed.');
   }
 }

@@ -1,7 +1,7 @@
 import { Component, OnInit, TemplateRef } from '@angular/core';
 import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
 
-declare var addMetric: any;
+// declare var addMetric: any;
 
 @Component({
   selector: 'app-pipeline-modal',
@@ -14,13 +14,13 @@ export class PipelineModalComponent implements OnInit {
   constructor(private modalService: BsModalService) {}
 
   modalLaunched() {
-    addMetric(2, 'Pipeline modal viewed.');
+    // addMetric(2, 'Pipeline modal viewed.');
   }
 
   openModal(template: TemplateRef<any>) {
     this.modalLaunched();
     this.modalRef = this.modalService.show(template, { class: 'modal-lg' });
-    addMetric(2, 'Pipeline modal viewed.');
+    // addMetric(2, 'Pipeline modal viewed.');
     console.log('Pipeline modal viewed.');
   }
   openModal2(template: TemplateRef<any>) {
@@ -37,7 +37,7 @@ export class PipelineModalComponent implements OnInit {
   }
 
   pipelineClosed() {
-    addMetric(2, 'Pipeline modal closed.');
+    // addMetric(2, 'Pipeline modal closed.');
     console.log('Pipeline modal closed.');
   }
 
