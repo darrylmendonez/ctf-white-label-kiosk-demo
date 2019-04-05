@@ -61,27 +61,27 @@ export class TrialComponent implements OnInit {
       this.subParameter = parameter;
       console.log('this.subParameter = ', this.subParameter);
       if (this.subParameter === 'uc1') {
-        addMetric(2, 'UC/1368-0004 trial card options viewed.');
+        // addMetric(2, 'UC/1368-0004 trial card options viewed.');
         console.log('UC/1368-0004 trial card options viewed.');
       }
       // tslint:disable-next-line:one-line
       else if (this.subParameter === 'uc2') {
-        addMetric(2, 'UC/1368-0005 trial card options viewed.');
+        // addMetric(2, 'UC/1368-0005 trial card options viewed.');
         console.log('UC/1368-0005 trial card options viewed.');
       }
       // tslint:disable-next-line:one-line
       else if (this.subParameter === 'uc3') {
-        addMetric(2, 'UC/1368-0010 trial card options viewed.');
+        // addMetric(2, 'UC/1368-0010 trial card options viewed.');
         console.log('UC/1368-0010 trial card options viewed.');
       }
       // tslint:disable-next-line:one-line
       else if (this.subParameter === 'ln1') {
-        addMetric(2, 'LN/1293-0010 trial card options viewed.');
+        // addMetric(2, 'LN/1293-0010 trial card options viewed.');
         console.log('LN/1293-0010 trial card options viewed.');
       }
       // tslint:disable-next-line:one-line
       else if (this.subParameter === 'ln2') {
-        addMetric(2, 'LN/1293-0013 trial card options viewed.');
+        // addMetric(2, 'LN/1293-0013 trial card options viewed.');
         console.log('LN/1293-0013 trial card options viewed.');
       }
     }, 250);
@@ -101,27 +101,27 @@ export class TrialComponent implements OnInit {
     }
     console.log('this.subParameter = ', this.subParameter);
     if (this.subParameter === 'uc1') {
-      addMetric(2, 'UC/1368-0004 trial card options viewed.');
+      // addMetric(2, 'UC/1368-0004 trial card options viewed.');
       console.log('UC/1368-0004 trial card options viewed.');
     }
     // tslint:disable-next-line:one-line
     else if (this.subParameter === 'uc2') {
-      addMetric(2, 'UC/1368-0005 trial card options viewed.');
+      // addMetric(2, 'UC/1368-0005 trial card options viewed.');
       console.log('UC/1368-0005 trial card options viewed.');
     }
     // tslint:disable-next-line:one-line
     else if (this.subParameter === 'uc3') {
-      addMetric(2, 'UC/1368-0010 trial card options viewed.');
+      // addMetric(2, 'UC/1368-0010 trial card options viewed.');
       console.log('UC/1368-0010 trial card options viewed.');
     }
     // tslint:disable-next-line:one-line
     else if (this.subParameter === 'ln1') {
-      addMetric(2, 'LN/1293-0010 trial card options viewed.');
+      // addMetric(2, 'LN/1293-0010 trial card options viewed.');
       console.log('LN/1293-0010 trial card options viewed.');
     }
     // tslint:disable-next-line:one-line
     else if (this.subParameter === 'ln2') {
-      addMetric(2, 'LN/1293-0013 trial card options viewed.');
+      // addMetric(2, 'LN/1293-0013 trial card options viewed.');
       console.log('LN/1293-0013 trial card options viewed.');
     }
     console.log('loadSubTrialsFromTrialLinks fired');
@@ -231,23 +231,23 @@ export class TrialComponent implements OnInit {
     console.log('this.currentTrial = ', this.currentTrial);
     console.log('this.currentCompoundInfo = ', this.currentCompoundInfo);
     if (this.currentParams === 'uc' || this.currentParams === 'ln') {
-      addMetric(
-        2,
-        this.currentDisease.primaryName + ' trial card options viewed.'
-      );
+      // addMetric(
+        // 2,
+        // this.currentDisease.primaryName + ' trial card options viewed.'
+      // );
       console.log(
         this.currentDisease.primaryName + ' trial card options viewed.'
       );
     }
     // tslint:disable-next-line:one-line
     else {
-      addMetric(
-        2,
-        this.currentDisease.primaryName +
-          '/' +
-          this.currentTrial.name +
-          ' trial card viewed.'
-      );
+      // addMetric(
+      //   2,
+      //   this.currentDisease.primaryName +
+      //     '/' +
+      //     this.currentTrial.name +
+      //     ' trial card viewed.'
+      // );
       console.log(
         this.currentDisease.primaryName +
           '/' +
