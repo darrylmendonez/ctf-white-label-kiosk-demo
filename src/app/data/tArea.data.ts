@@ -324,19 +324,19 @@ export const DiseaseData: IDisease[] = [
 
 export const TAreaData: ITArea[] = [
   {
-    name: 'Dermatology',
+    name: 'Cardiology',
     diseases: [DiseaseData[0], DiseaseData[1], DiseaseData[2]],
   },
   {
-    name: 'Gastroenterology',
+    name: 'Endocrinology',
     diseases: [DiseaseData[3], DiseaseData[4]],
   },
   {
-    name: 'Rheumatology',
+    name: 'Gastroenterology',
     diseases: [DiseaseData[5]],
   },
   {
-    name: 'Pulmonology',
+    name: 'Hematology',
     diseases: [DiseaseData[6], DiseaseData[7]],
   },
 ];
