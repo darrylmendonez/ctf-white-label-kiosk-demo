@@ -1,4 +1,4 @@
-import { TimeoutService } from './services/timeout.service';
+// import { TimeoutService } from './services/timeout.service';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -49,9 +49,9 @@ import { AttractorComponent } from './components/attractor/attractor.component';
   // entryComponents: [
   //   TimeoutModalComponent
   // ],
-  providers: [
-    TimeoutService,
-  ],
+  // providers: [
+  //   TimeoutService,
+  // ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

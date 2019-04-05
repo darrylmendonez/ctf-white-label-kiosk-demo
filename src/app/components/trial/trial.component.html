@@ -47,9 +47,9 @@
         </div>
         <div
           class="card-content"
-          *ngIf="currentParams === 'uc' || currentParams === 'ln'"
+          *ngIf="currentParams === 'dolor' || currentParams === 'amet'"
         >
-          <div *ngIf="currentParams === 'uc'">
+          <div *ngIf="currentParams === 'dolor'">
             <!-- sub trial buttons -->
             <div
               [@flipCardFront]="!!cardFlipped"
@@ -63,15 +63,13 @@
                 Phase {{ trial.phase }} <span>{{ trial.name }}</span>
               </button>
               <p class="footnotes">
-                *This compound is an investigational agent in the therapeutic
-                focus area(s) and is not approved. Its safety and efficacy have
-                not been established.
+                *Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.
               </p>
             </div>
             <!-- sub trial data cards -->
             <div [@flipCardBack]="!!cardFlipped">
               <div class="card-body__indent trials-uc-ln">
-                <div *ngIf="subParameter === 'uc1'">
+                <div *ngIf="subParameter === 'dolor1'">
                   <button
                     class="btn btn-link btn-close btn-subtrial-close"
                     (click)="loadSubTrials(currentDisease.parameterName)"
@@ -83,33 +81,24 @@
                     Close
                   </button>
                   Phase II
-                  <h3>1368-0004</h3>
+                  <h3>5678-9012</h3>
                   <ul>
                     <li>
-                      N = 10
+                      Consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem
                     </li>
                     <li>
-                      Open-label, exploratory study
+                      Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur
                     </li>
                     <li>
-                      Primary endpoint: Change in gene expression through Week
-                      12
-                    </li>
-                    <li>
-                      ClinicalTrials.gov identifier: NCT03100864; EudraCT No.:
-                      2017-000100-20
+                      Quis autem vel eum
                     </li>
                   </ul>
                   <p class="footnotes">
-                    *This compound is an investigational agent in the
-                    therapeutic focus area(s) and is not approved. Its safety
-                    and efficacy have not been established.<br />
-                    ClinicalTrials.gov. Available at:
-                    https://www.clinicaltrials.gov/ct2/show/NCT03100864
-                    (Accessed 17 January 2019)
+                    *Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.<br />
+                    Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
                   </p>
                 </div>
-                <div *ngIf="subParameter === 'uc2'">
+                <div *ngIf="subParameter === 'dolor2'">
                   <button
                     class="btn btn-link btn-close btn-subtrial-close"
                     (click)="loadSubTrials(currentDisease.parameterName)"
@@ -121,47 +110,32 @@
                     Close
                   </button>
                   Phase II/III
-                  <h3>1368-0005</h3>
+                  <h3>3456-7890</h3>
                   <ul>
                     <li>
-                      N = 550
+                      Siure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur
                     </li>
                     <li>
-                      Multicenter, randomized, double-blind, placebo-controlled
-                      study
+                      Vel illum qui dolorem eum fugiat quo voluptas nulla pariatur
                     </li>
                     <ul>
                       <li>
-                        Phase II: Proof-of-concept study of BI 655130* in
-                        patients with moderate to severely active ulcerative
-                        colitis who have failed previous treatments to identify
-                        efficacious and safe dose regimens
+                        At vero eos et accusamus et iusto
                       </li>
                       <li>
-                        Phase III: Confirm efficacy and safety of BI 655130* in
-                        patients with moderate to severely active ulcerative
-                        colitis who have failed previous biologic regimens
+                        Odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident
                       </li>
                     </ul>
                     <li>
-                      Primary endpoint: Proportion of patients with clinical
-                      remission at Week 12
-                    </li>
-                    <li>
-                      ClinicalTrials.gov identifier: NCT03482635; EudraCT No.:
-                      2017-004230-28
+                      Similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga
                     </li>
                   </ul>
                   <p class="footnotes">
-                    *This compound is an investigational agent in the
-                    therapeutic focus area(s) and is not approved. Its safety
-                    and efficacy have not been established.<br />
-                    ClinicalTrials.gov. Available at:
-                    https://www.clinicaltrials.gov/ct2/show/NCT03482635
-                    (Accessed 17 January 2019)
+                    *Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.<br />
+                    Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
                   </p>
                 </div>
-                <div *ngIf="subParameter === 'uc3'">
+                <div *ngIf="subParameter === 'dolor3'">
                   <button
                     class="btn btn-link btn-close btn-subtrial-close"
                     (click)="loadSubTrials(currentDisease.parameterName)"
@@ -173,40 +147,31 @@
                     Close
                   </button>
                   Phase II
-                  <h3>1368-0010</h3>
+                  <h3>9876-5432</h3>
                   <ul>
                     <li>
-                      N = 30
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit
                     </li>
                     <li>
-                      Multicenter, randomized, double-blind, placebo-controlled,
-                      proof-of-concept study
+                      Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
                     </li>
                     <li>
-                      Primary endpoint: Proportion of patients with mucosal
-                      healing (MCS mESS &le; 1) at Week 8
+                      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat
                     </li>
                     <li>
-                      ClinicalTrials.gov identifier: NCT03123120; EudraCT No.:
-                      2016-004572-21
+                      Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur
                     </li>
                   </ul>
                   <p class="footnotes">
-                    *This compound is an investigational agent in the
-                    therapeutic focus area(s) and is not approved. Its safety
-                    and efficacy have not been established.<br />
-                    MCS, Mayo Clinic Score; mESS, modified Endoscopic
-                    Subscore.<br />
-                    ClinicalTrials.gov. Available at:
-                    https://www.clinicaltrials.gov/ct2/show/NCT03123120
-                    (Accessed 17 January 2019)
+                    *Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.<br />
+                    Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
                   </p>
                 </div>
               </div>
             </div>
           </div>
 
-          <div *ngIf="currentParams === 'ln'">
+          <div *ngIf="currentParams === 'amet'">
             <!-- sub trial buttons -->
             <div
               [@flipCardFront]="!!cardFlipped"
@@ -220,19 +185,13 @@
                 Phase {{ trial.phase }} <span>{{ trial.name }}</span>
               </button>
               <p class="footnotes">
-                <sup>*</sup>This compound is an investigational agent in the
-                therapeutic focus area(s) and is not approved. Its safety and
-                efficacy have not been established. <br /><sup>✝</sup>BI 655064
-                is part of a collaboration with Pharmacy Company; Company Brand is
-                currently responsible for the clinical development and Pharmacy Company
-                may elect to advance the program after completion of certain
-                undisclosed clinical achievements.
+                <sup>*</sup>Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.
               </p>
             </div>
             <!-- sub trial data cards -->
             <div [@flipCardBack]="!!cardFlipped">
               <div class="card-body__indent trials-uc-ln">
-                <div *ngIf="subParameter === 'ln1'">
+                <div *ngIf="subParameter === 'amet1'">
                   <button
                     class="btn btn-link btn-close btn-subtrial-close"
                     (click)="loadSubTrials(currentDisease.parameterName)"
@@ -244,43 +203,30 @@
                     Close
                   </button>
                   Phase II
-                  <h3>1293-0010</h3>
+                  <h3>3212-3456</h3>
                   <ul>
                     <li>
-                      N = 120
+                      Totam rem aperiam
                     </li>
                     <li>
-                      Multicenter, randomized, double-blind, placebo-controlled
-                      study
+                      Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo
                     </li>
                     <li>
-                      Patients with active lupus nephritis
+                      Nemo enim ipsam voluptatem
                     </li>
                     <li>
-                      Primary endpoint: Proportion of patients with CRR at Week
-                      52
+                      Quia voluptas sit aspernatur aut odit aut fugit
                     </li>
                     <li>
-                      ClinicalTrials.gov identifier: NCT02770170; EudraCT No.:
-                      2015-001750-15
+                      Sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt
                     </li>
                   </ul>
                   <p class="footnotes">
-                    <sup>*</sup>This compound is an investigational agent in the
-                    therapeutic focus area(s) and is not approved. Its safety
-                    and efficacy have not been established.<br />
-                    ✝BI 655064 is part of a collaboration with Pharmacy Company;
-                    Company Brand is currently responsible for the
-                    clinical development and Pharmacy Company may elect to advance the
-                    program after completion of certain undisclosed clinical
-                    achievements.<br />
-                    CRR, complete renal response.<br />ClinicalTrials.gov.
-                    Available at:
-                    https://www.clinicaltrials.gov/ct2/show/NCT02770170
-                    (Accessed 17 January 2019)
+                    *Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.<br />
+                    Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
                   </p>
                 </div>
-                <div *ngIf="subParameter === 'ln2'">
+                <div *ngIf="subParameter === 'amet2'">
                   <button
                     class="btn btn-link btn-close btn-subtrial-close"
                     (click)="loadSubTrials(currentDisease.parameterName)"
@@ -292,43 +238,27 @@
                     Close
                   </button>
                   Phase II
-                  <h3>1293-0013</h3>
+                  <h3>7890-9876</h3>
                   <ul>
                     <li>
-                      N = 150
+                      Neque porro quisquam est
                     </li>
                     <li>
-                      Multicenter, randomized, double-blind, placebo-controlled
-                      study
+                      Qui dolorem ipsum quia dolor sit amet
                     </li>
                     <li>
-                      Patients with lupus nephritis who have achieved a CRR or a
-                      PRR or proteinuria &le; 1 g/day (or urine
-                      protein/creatinine ratio &le; 1) in NCT02770170
+                      Consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt
                     </li>
                     <li>
-                      Primary endpoint: Proportion of patients with CRR and
-                      without any renal flares at Week 52
+                      Ut labore et dolore magnam aliquam quaerat voluptatem
                     </li>
                     <li>
-                      ClinicalTrials.gov identifier: NCT03385564; EudraCT No.:
-                      2017-003101-17
+                      Ut enim ad minima veniam
                     </li>
                   </ul>
                   <p class="footnotes">
-                    <sup>*</sup>This compound is an investigational agent in the
-                    therapeutic focus area(s) and is not approved. Its safety
-                    and efficacy have not been established.<br />
-                    ✝BI 655064 is part of a collaboration with Pharmacy Company;
-                    Company Brand is currently responsible for the
-                    clinical development and Pharmacy Company may elect to advance the
-                    program after completion of certain undisclosed clinical
-                    achievements.<br />
-                    CRR, complete renal response; PRR, partial renal
-                    response.<br />
-                    ClinicalTrials.gov. Available at:
-                    https://www.clinicaltrials.gov/ct2/show/NCT03385564
-                    (Accessed 17 January 2019)
+                    *Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.<br />
+                    Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
                   </p>
                 </div>
               </div>
@@ -338,7 +268,7 @@
         <!-- single trial data cards -->
         <div
           class="card-body__indent trials-uc-ln"
-          *ngIf="currentParams !== 'uc' && currentParams !== 'ln'"
+          *ngIf="currentParams !== 'dolor' && currentParams !== 'amet'"
         >
           Phase {{ currentTrial.phase }}
           <h3>{{ currentTrial.name }}</h3>

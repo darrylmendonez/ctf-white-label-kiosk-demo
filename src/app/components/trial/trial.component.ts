@@ -133,28 +133,28 @@ export class TrialComponent implements OnInit {
     this.tAreas = TAreaData;
     this.currentParams = diseaseName || this.trialParams;
 
-    if (this.currentParams === 'gpp') {
+    if (this.currentParams === 'li') {
       this.currentTArea = this.tAreas[0];
       this.currentDisease = this.currentTArea.diseases[0];
       this.currentTrial = this.currentDisease.trials[0];
       this.currentCompoundInfo = this.currentTrial.compoundInfo;
     }
     // tslint:disable-next-line:one-line
-    else if (this.currentParams === 'ppp') {
+    else if (this.currentParams === 'lorem') {
       this.currentTArea = this.tAreas[0];
       this.currentDisease = this.currentTArea.diseases[1];
       this.currentTrial = this.currentDisease.trials[0];
       this.currentCompoundInfo = this.currentTrial.compoundInfo;
     }
     // tslint:disable-next-line:one-line
-    else if (this.currentParams === 'pso') {
+    else if (this.currentParams === 'ipsum') {
       this.currentTArea = this.tAreas[0];
       this.currentDisease = this.currentTArea.diseases[2];
       this.currentTrial = this.currentDisease.trials[0];
       this.currentCompoundInfo = this.currentTrial.compoundInfo;
     }
     // tslint:disable-next-line:one-line
-    else if (this.currentParams === 'uc') {
+    else if (this.currentParams === 'dolor') {
       this.cardFlipped = false;
       this.currentTArea = this.tAreas[1];
       this.currentDisease = this.currentTArea.diseases[0];
@@ -162,7 +162,7 @@ export class TrialComponent implements OnInit {
       this.currentCompoundInfo = this.currentTrial.compoundInfo;
     }
     // tslint:disable-next-line:one-line
-    else if (this.currentParams === 'uc1') {
+    else if (this.currentParams === 'dolor1') {
       // this.subTrialTransitioning = true;
       this.currentTArea = this.tAreas[1];
       this.currentDisease = this.currentTArea.diseases[0];
@@ -170,28 +170,28 @@ export class TrialComponent implements OnInit {
       this.currentCompoundInfo = this.currentTrial.compoundInfo;
     }
     // tslint:disable-next-line:one-line
-    else if (this.currentParams === 'uc2') {
+    else if (this.currentParams === 'dolor2') {
       this.currentTArea = this.tAreas[1];
       this.currentDisease = this.currentTArea.diseases[0];
       this.currentTrial = this.currentDisease.trials[1];
       this.currentCompoundInfo = this.currentTrial.compoundInfo;
     }
     // tslint:disable-next-line:one-line
-    else if (this.currentParams === 'uc3') {
+    else if (this.currentParams === 'dolor3') {
       this.currentTArea = this.tAreas[1];
       this.currentDisease = this.currentTArea.diseases[0];
       this.currentTrial = this.currentDisease.trials[2];
       this.currentCompoundInfo = this.currentTrial.compoundInfo;
     }
     // tslint:disable-next-line:one-line
-    else if (this.currentParams === 'cd') {
+    else if (this.currentParams === 'sit') {
       this.currentTArea = this.tAreas[1];
       this.currentDisease = this.currentTArea.diseases[1];
       this.currentTrial = this.currentDisease.trials[0];
       this.currentCompoundInfo = this.currentTrial.compoundInfo;
     }
     // tslint:disable-next-line:one-line
-    else if (this.currentParams === 'ln') {
+    else if (this.currentParams === 'amet') {
       this.cardFlipped = false;
       this.currentTArea = this.tAreas[2];
       this.currentDisease = this.currentTArea.diseases[0];
@@ -199,28 +199,28 @@ export class TrialComponent implements OnInit {
       this.currentCompoundInfo = this.currentTrial.compoundInfo;
     }
     // tslint:disable-next-line:one-line
-    else if (this.currentParams === 'ln1') {
+    else if (this.currentParams === 'amet1') {
       this.currentTArea = this.tAreas[2];
       this.currentDisease = this.currentTArea.diseases[0];
       this.currentTrial = this.currentDisease.trials[0];
       this.currentCompoundInfo = this.currentTrial.compoundInfo;
     }
     // tslint:disable-next-line:one-line
-    else if (this.currentParams === 'ln2') {
+    else if (this.currentParams === 'amet2') {
       this.currentTArea = this.tAreas[2];
       this.currentDisease = this.currentTArea.diseases[0];
       this.currentTrial = this.currentDisease.trials[1];
       this.currentCompoundInfo = this.currentTrial.compoundInfo;
     }
     // tslint:disable-next-line:one-line
-    else if (this.currentParams === 'ssc-ild') {
+    else if (this.currentParams === 'consectetur') {
       this.currentTArea = this.tAreas[3];
       this.currentDisease = this.currentTArea.diseases[0];
       this.currentTrial = this.currentDisease.trials[0];
       this.currentCompoundInfo = this.currentTrial.compoundInfo;
     }
     // tslint:disable-next-line:one-line
-    else if (this.currentParams === 'pf-ild') {
+    else if (this.currentParams === 'elit') {
       this.currentTArea = this.tAreas[3];
       this.currentDisease = this.currentTArea.diseases[1];
       this.currentTrial = this.currentDisease.trials[0];
