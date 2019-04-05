@@ -15,7 +15,7 @@ import { UserIdleModule } from 'angular-user-idle';
 import { PipelineModalComponent } from './components/home/pipeline-modal/pipeline-modal.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HomeMenuBtnComponent } from './components/home-menu-btn/home-menu-btn.component';
-import { TimeoutModalComponent } from './components/timeout-modal/timeout-modal.component';
+// import { TimeoutModalComponent } from './components/timeout-modal/timeout-modal.component';
 import { AttractorComponent } from './components/attractor/attractor.component';
 
 @NgModule({
@@ -27,7 +27,7 @@ import { AttractorComponent } from './components/attractor/attractor.component';
     FooterComponent,
     PipelineModalComponent,
     HomeMenuBtnComponent,
-    TimeoutModalComponent,
+    // TimeoutModalComponent,
     AttractorComponent,
   ],
   imports: [
@@ -46,9 +46,9 @@ import { AttractorComponent } from './components/attractor/attractor.component';
       ping: 0
     }),
   ],
-  entryComponents: [
-    TimeoutModalComponent
-  ],
+  // entryComponents: [
+  //   TimeoutModalComponent
+  // ],
   providers: [
     TimeoutService,
   ],
