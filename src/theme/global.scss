@@ -5,7 +5,7 @@ html {
 }
 
 body {
-  background-image: url('assets/images/background_blue-01.png');
+  background-image: url('assets/images/purple.jpg');
   background-position: top center;
   background-repeat: no-repeat;
   background-size: 100%;
@@ -37,6 +37,10 @@ footer {
   font-size: $footer-font-size;
   letter-spacing: -0.22px;
   padding: 1.2rem 0;
+}
+
+.title {
+  color: $dark-blue;
 }
 
 .btn {
