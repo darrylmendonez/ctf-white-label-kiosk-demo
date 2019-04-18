@@ -7,11 +7,11 @@
         </div>
         <div class="card-body">
           <ul class="list-group list-group-flush">
-            <li class="list-group-item text-center" *ngFor="let disease of area.diseases">
+            <li class="list-group-item" *ngFor="let disease of area.diseases">
                 <button
                 [class.active]="disease.parameterName === currentDisease.parameterName"
                 [routerLink]="['/trial/'] + disease.parameterName"
-                class="btn btn-primary btn-trial"
+                class="btn btn-primary btn-trial text-center"
                 (click)="loadData(disease.parameterName)"
               >
                 {{ disease.primaryName }}<br>

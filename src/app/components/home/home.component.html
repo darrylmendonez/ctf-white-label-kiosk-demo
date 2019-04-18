@@ -7,9 +7,9 @@
         </div>
         <div class="card-body">
           <ul class="list-group list-group-flush">
-            <li class="list-group-item text-center"
+            <li class="list-group-item"
             *ngFor="let disease of area.diseases">
-              <button class="btn btn-primary" [routerLink]="['/trial/'] + disease.parameterName">
+              <button class="btn btn-primary text-center" [routerLink]="['/trial/'] + disease.parameterName">
                 {{ disease.primaryName }}<br>
                 {{ disease.secondaryName }}
               </button>
