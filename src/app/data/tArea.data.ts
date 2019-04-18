@@ -282,7 +282,7 @@ export const DiseaseData: IDisease[] = [
     parameterName: 'dolor',
     primaryName: 'Dolor',
     secondaryName: 'Nam libero',
-    trials: [TrialsData[3], TrialsData[4], TrialsData[5]],
+    trials: [TrialsData[3]],
   },
   {
     parameterName: 'sit',
@@ -294,7 +294,7 @@ export const DiseaseData: IDisease[] = [
     parameterName: 'amet',
     primaryName: 'Amet',
     secondaryName: 'Soluta nobis',
-    trials: [TrialsData[7], TrialsData[8]],
+    trials: [TrialsData[7]],
   },
   {
     parameterName: 'consectetur',

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-declare var addMetric: any;
+// declare var addMetric: any;
 
 @Component({
   selector: 'app-attractor',
@@ -10,7 +10,7 @@ declare var addMetric: any;
 export class AttractorComponent implements OnInit {
 
   startSession() {
-    addMetric(1, 'Session Start');
+    // addMetric(1, 'Session Start');
     console.log('Session Start');
   }
 

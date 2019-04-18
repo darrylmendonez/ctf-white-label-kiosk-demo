@@ -1,26 +1,21 @@
-<div class="container trial-wrap">
-  <div class="card" *ngFor="let area of tAreas">
-    <div class="card-body">
-      <h2 class="card-title">{{ area.name }}</h2>
-      <div class="card-btn-group">
-        <button
-          class="btn btn-primary card-btn"
-          *ngFor="let disease of area.diseases"
-          [routerLink]="['/trial/'] + disease.parameterName"
-        >
-          {{ disease.primaryName }}<span>{{ disease.secondaryName }}</span>
-        </button>
+<div class="container">
+  <div class="row">
+    <div class="col-md-3" *ngFor="let area of tAreas">
+      <div class="card">
+        <div class="card-body">
+          <h2 class="card-title text-responsive">{{ area.name }}</h2>
+          <span
+          *ngFor="let disease of area.diseases">
+            <button
+              class="btn btn-primary"
+              [routerLink]="['/trial/'] + disease.parameterName"
+            >
+              {{ disease.primaryName }}<span>{{ disease.secondaryName }}</span>
+            </button><br>
+            <br>
+          </span>
+        </div>
       </div>
     </div>
   </div>
-</div>
-
-<div class="container pipeline-wrap">
-  <!-- <div class="card">
-    <div class="card-body">
-      <h3 class="pipeline-title card-title">Immunology Pipeline <span>At A Glance</span></h3>
-      <app-pipeline-modal></app-pipeline-modal>
-    </div>
-  </div> -->
-  <h3><em>Demo note: this app is used as a touchscreen kiosk and is intended to be viewed at 1920 x 1080. Use developer tools to change your browser ratio via the 'Toggle device toolbar' icon.</em></h3>
 </div>

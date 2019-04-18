@@ -2,7 +2,7 @@ import { Component, HostListener, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, NavigationStart, NavigationEnd } from '@angular/router';
 // import { TimeoutService } from './services/timeout.service';
 
-declare var addMetric: any;
+// declare var addMetric: any;
 
 @Component({
   selector: 'app-root',
