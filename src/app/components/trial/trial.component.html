@@ -2,21 +2,24 @@
   <div class="row">
     <div class="col-md-3" *ngFor="let area of tAreas">
       <div class="card">
-        <div class="card-body">
+        <div class="card-header">
           <h5 class="card-title">{{ area.name }}</h5>
         </div>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item" *ngFor="let disease of area.diseases">
-              <button
-              [class.active]="disease.parameterName === currentDisease.parameterName"
-              [routerLink]="['/trial/'] + disease.parameterName"
-              class="btn btn-primary btn-trial"
-              (click)="loadData(disease.parameterName)"
-            >
-              {{ disease.primaryName }}<span>{{ disease.secondaryName }}</span>
-            </button>
-          </li>
-        </ul>
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item text-center" *ngFor="let disease of area.diseases">
+                <button
+                [class.active]="disease.parameterName === currentDisease.parameterName"
+                [routerLink]="['/trial/'] + disease.parameterName"
+                class="btn btn-primary btn-trial"
+                (click)="loadData(disease.parameterName)"
+              >
+                {{ disease.primaryName }}<br>
+                {{ disease.secondaryName }}
+              </button>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
